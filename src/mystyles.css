@@ -289,3 +289,41 @@ footer {
   font-weight: bold;
   border-bottom: 2px solid teal; /* soft underline */
 }
+
+@media (max-width: 768px) {
+  .header-content h1 {
+    font-size: 40px;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
+
+  .navbar a {
+    font-size: 18px;
+    gap: 15px;
+  }
+
+  .card, .post1, .welcome {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .card h2, .post1 h3 {
+    font-size: 22px;
+  }
+
+  .card p, .post1 p, .welcome p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .read-more {
+    font-size: 14px;
+  }
+
+  #scrollTopBtn {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+}
