@@ -50,9 +50,11 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 40px;
   padding: 12px 20px;
   border-bottom: 1px solid #eee;
+  position: relative;
 }
 
 .navbar a {
@@ -60,7 +62,6 @@ body {
   color: #444;
   font-size: 24px;
   transition: all 0.3s ease;
-  flex: 1;
   text-align: center;
   position: relative;
 }
@@ -81,6 +82,26 @@ body {
 
 .navbar a:hover::after {
   width: 50%;
+}
+
+.navbar a.active {
+  color: teal;
+  font-weight: bold;
+  border-bottom: 2px solid teal;
+}
+
+/* Nav links grouped */
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #444;
 }
 
 /* Main Section */
@@ -164,7 +185,7 @@ main {
 /* Blog Post Styling */
 .post1 {
   background-color: #ffffff;
-  border: 1px solid #eee; /* added subtle frame */
+  border: 1px solid #eee;
   border-radius: 12px;
   padding: 40px;
   margin-top: 40px;
@@ -284,32 +305,72 @@ footer {
   background-color: #004d4d;
 }
 
-.navbar a.active {
-  color: teal; /* or a slightly darker teal */
-  font-weight: bold;
-  border-bottom: 2px solid teal; /* soft underline */
-}
-
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    margin: 10px auto;
+  }
+
   .header-content h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .tagline {
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  .navbar a {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    color: #444;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 200px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
     font-size: 18px;
-    gap: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  main {
+    padding: 0 20px;
   }
 
   .card, .post1, .welcome {
     padding: 20px;
-    margin: 20px;
+    margin: 20px 10px;
   }
 
-  .card h2, .post1 h3 {
+  .card h2, .post1 h3, .welcome h2 {
     font-size: 22px;
   }
 

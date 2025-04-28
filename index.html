@@ -15,84 +15,89 @@
 
 <body>
 
-  <header class="header">
-    <img src="src/P.png" alt="Logo" class="logo" />
-    <div class="header-content">
-      <h1>Pith & Reverie</h1>
-      <span class="tagline">Soft truths. Real weight.</span>
-    </div>
-  </header>
+<header class="header">
+  <img src="src/P.png" alt="Logo" class="logo" />
+  <div class="header-content">
+    <h1>Pith & Reverie</h1>
+    <span class="tagline">Soft truths. Real weight.</span>
+  </div>
+</header>
 
-  <nav class="navbar">
+<nav class="navbar">
+  <div class="hamburger" id="hamburger">
+    ☰
+  </div>
+  <div class="nav-links" id="navLinks">
     <a href="index.html" class="active">Welcome</a>
     <a href="threadedroots.html">Threaded Roots</a>
     <a href="chaoscalm.html">Chaos & Calm</a>
     <a href="reverienotes.html">Reverie Notes</a>
-  </nav>
+  </div>
+</nav>
 
-  <main>
+<main>
 
-    <!-- Welcome Section -->
-    <div class="welcome">
-      <h2>Welcome to Pith & Reverie</h2>
+  <!-- Welcome Section -->
+  <div class="welcome">
+    <h2>Welcome to Pith & Reverie</h2>
 
-      <p>This isn’t a loud space.  
-      It’s a slow one.  
-      Where thoughts grow roots, stories breathe gently, and every word carries weight.</p>
+    <p>This isn’t a loud space.  
+    It’s a slow one.  
+    Where thoughts grow roots, stories breathe gently, and every word carries weight.</p>
 
-      <p>I don’t write to be followed.  
-      I write to remember.  
-      To reflect.  
-      To rise again.</p>
+    <p>I don’t write to be followed.  
+    I write to remember.  
+    To reflect.  
+    To rise again.</p>
 
-      <p>Here, you’ll find pages stitched from moments:  
-      small victories, quiet griefs, unexpected sparks of wonder.  
-      Each post is a thread — woven from the messy, miraculous fabric of being human.</p>
+    <p>Here, you’ll find pages stitched from moments:  
+    small victories, quiet griefs, unexpected sparks of wonder.  
+    Each post is a thread — woven from the messy, miraculous fabric of being human.</p>
 
-      <p>If you’ve ever held joy and heaviness in the same hand,  
-      you’re home.</p>
+    <p>If you’ve ever held joy and heaviness in the same hand,  
+    you’re home.</p>
 
-      <p>Take your time here. Wander. Rest.  
-      And if you find something that feels familiar — stay a little longer.</p>
+    <p>Take your time here. Wander. Rest.  
+    And if you find something that feels familiar — stay a little longer.</p>
+  </div>
+
+  <!-- Cards for Sections -->
+  <div class="card-container">
+
+    <div class="card" id="about">
+      <h2>Threaded Roots</h2>
+      <p>I don’t write to be understood by everyone. I write to remember who I am. This space is rooted in growth, grief, joy, and soft power — a place to unpack the weight of being human.</p>
+      <small>Who I Am</small>
+      <br>
+      <a class="read-more" href="threadedroots.html">Read More →</a>
     </div>
 
-    <!-- Cards for Sections -->
-    <div class="card-container">
+    <div class="card" id="chaos">
+      <h2>Chaos & Calm</h2>
+      <p>Some days I fall apart. Some days I’m steady like stone. Most days, I’m both — holding hands with the mess and the meaning. These are the pages from both sides.</p>
+      <small>Finding the balance</small>
+      <br>
+      <a class="read-more" href="chaoscalm.html">Read More →</a>
+    </div>
 
-      <div class="card" id="about">
-        <h2>Threaded Roots</h2>
-        <p>I don’t write to be understood by everyone. I write to remember who I am. This space is rooted in growth, grief, joy, and soft power — a place to unpack the weight of being human.</p>
-        <small>Who I Am</small>
-        <br>
-        <a class="read-more" href="threadedroots.html">Read More →</a>
-      </div>
+    <div class="card" id="notes">
+      <h2>Reverie Notes</h2>
+      <p>Notes to self, stray thoughts, whispered reminders. I let them spill here, where no one's watching — except maybe the parts of me I’ve forgotten.</p>
+      <small>Soft thoughts in the in-between</small>
+      <br>
+      <a class="read-more" href="reverienotes.html">Read More →</a>
+    </div>
 
-      <div class="card" id="chaos">
-        <h2>Chaos & Calm</h2>
-        <p>Some days I fall apart. Some days I’m steady like stone. Most days, I’m both — holding hands with the mess and the meaning. These are the pages from both sides.</p>
-        <small>Finding the balance</small>
-        <br>
-        <a class="read-more" href="chaoscalm.html">Read More →</a>
-      </div>
+  </div> <!-- Closed card-container properly -->
 
-      <div class="card" id="notes">
-        <h2>Reverie Notes</h2>
-        <p>Notes to self, stray thoughts, whispered reminders. I let them spill here, where no one's watching — except maybe the parts of me I’ve forgotten.</p>
-        <small>Soft thoughts in the in-between</small>
-        <br>
-        <a class="read-more" href="reverienotes.html">Read More →</a>
-      </div>
+</main>
 
-    </div> <!-- Closed card-container properly -->
+<button id="scrollTopBtn" title="Go to top">↑</button>
 
-  </main>
+<footer>
+  <p>&copy; 2024 Pith & Reverie. All rights reserved.</p>
+</footer>
 
-  <button id="scrollTopBtn" title="Go to top">↑</button>
-
-  <footer>
-    <p>&copy; 2024 Pith & Reverie. All rights reserved.</p>
-  </footer>
-
-  <script src="src/myscript.js"></script> 
+<script src="src/myscript.js"></script> 
 </body>
 </html>
