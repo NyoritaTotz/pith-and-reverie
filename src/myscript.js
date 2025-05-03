@@ -32,3 +32,24 @@ document.querySelectorAll("#navLinks a").forEach((link) => {
     hamburger.setAttribute("aria-expanded", "false");
   });
 });
+
+// Auto-generate TOC from .post1 sections
+document.addEventListener("DOMContentLoaded", function () {
+  const tocContainer = document.getElementById("toc");
+  const posts = document.querySelectorAll(".post1");
+  if (!tocContainer || posts.length === 0) return;
+
+  let tocHTML = "<h4>Jump to Note:</h4><ul>";
+
+  posts.forEach((post) => {
+    const heading = post.querySelector("h3");
+    const id = post.getAttribute("id");
+
+    if (heading && id) {
+      tocHTML += `<li><a href="#${id}">${heading.textContent}</a></li>`;
+    }
+  });
+
+  tocHTML += "</ul>";
+  tocContainer.innerHTML = tocHTML;
+});
