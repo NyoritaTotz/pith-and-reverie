@@ -1,23 +1,34 @@
 const scrollTopBtn = document.getElementById("scrollTopBtn");
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-window.addEventListener("scroll", function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+// Show/hide scroll-to-top button
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 20) {
     scrollTopBtn.style.display = "block";
   } else {
     scrollTopBtn.style.display = "none";
   }
 });
 
-scrollTopBtn.addEventListener("click", function() {
+// Smooth scroll to top
+scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
+// Toggle mobile nav menu
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+  hamburger.setAttribute("aria-expanded", navLinks.classList.contains("show"));
+});
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+// Close menu when a nav link is clicked (mobile)
+document.querySelectorAll("#navLinks a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+    hamburger.setAttribute("aria-expanded", "false");
+  });
 });
