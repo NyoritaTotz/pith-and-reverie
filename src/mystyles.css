@@ -400,3 +400,19 @@ footer {
     width: 120px;
   }
 }
+
+.back-link {
+  color: teal;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #004d4d;
+  text-decoration: underline;
+}
+
+.back-link:visited {
+  color: teal;
+}
